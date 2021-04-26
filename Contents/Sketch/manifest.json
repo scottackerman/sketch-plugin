@@ -1,0 +1,49 @@
+{
+  "name": "CreditWise Text Formatter",
+  "description": "Plugin to easily select preformatted text from the One Design and Creditwise Design Systems.",
+  "author": "Scott Ackerman and Ogo Batzorig",
+  "authorEmail" : "scott.ackerman@capitalone.com",
+  "version": "2.0.4",
+  "thisUpdate": "Adding 'light' to Proxima Nova Medium.",
+  "identifier": "creditwise_designsystem.plugin",
+  "icon" : "cw_icon.png",
+  "commands" : [
+    {
+      "name" : "Choose and apply from text styles",
+      "identifier" : "cwdst.plugin.textFormatter",
+      "script" : "cwTextFormatter.js",
+      "handler" : "cwTextFormatter",
+      "shortcut" : "cmd shift option t"
+    },
+    {
+      "name" : "Apply text styles by name",
+      "identifier" : "cwdst.plugin.setLayersToNames",
+      "script" : "setTextStylesToLayerNames.js",
+      "handler" : "setTextStylesToLayerNames",
+      "shortcut" : "cmd shift w",
+    },
+    {
+      "name" : "Update all named layers",
+      "identifier" : "cwdst.plugin.updateNamedLayers",
+      "script" : "updateAllNamedLayers.js",
+      "handler" : "updateLayers",
+      "shortcut" : "cmd shift option a",
+    },
+    {
+      "script" : "updateAllNamedLayers.js",
+      "handlers" : {
+        "actions" : {
+            "SelectionChanged.finish": "selectionChanged"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "CreditWise Text Formatter",
+    "items": [
+      "cwdst.plugin.textFormatter",
+      "cwdst.plugin.setLayersToNames",
+      "cwdst.plugin.updateNamedLayers",
+    ]
+  }
+}

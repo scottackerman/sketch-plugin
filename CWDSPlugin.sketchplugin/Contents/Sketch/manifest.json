@@ -1,0 +1,25 @@
+{
+  "name": "CreditWise Text Formatter",
+  "description": "Plugin to easily select preformatted text from the One Design and Creditwise Design Systems.",
+  "author": "Scott Ackerman and Ogo Batzorig",
+  "authorEmail" : "scott.ackerman@capitalone.com",
+  "version": "1.0.0",
+  "identifier": "creditwise_designsystem.plugin",
+  "icon" : "cw_icon.png",
+  "commands" : [
+    {
+      "name" : "Select and Apply Text Styles",
+      "identifier" : "cwdst.plugin.CWTextFormatter",
+      "script" : "cwTextFormatter.js",
+      "handler" : "cwTextFormatter",
+      "shortcut" : "cmd shift option t"
+    },
+    {
+      "name" : "Apply Text Styles By Name",
+      "identifier" : "cwdst.plugin.setLayersToNames",
+      "script" : "setTextStylesToLayerNames.js",
+      "handler" : "setTextStylesToLayerNames",
+      "shortcut" : "cmd shift w",
+    },
+  ]
+}
